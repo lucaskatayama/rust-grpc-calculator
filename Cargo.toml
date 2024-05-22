@@ -1,0 +1,22 @@
+[package]
+name = "rust-grpc-calculator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+prost = { version = "0.12.6", features = ["derive", "prost-derive"] }
+tokio = { version = "1.37.0", features = ["full"] }
+tonic = "0.11.0"
+tonic-reflection = "0.11.0"
+
+[build-dependencies]
+tonic-build = "0.11.0"
+
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
